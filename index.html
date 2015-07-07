@@ -292,6 +292,90 @@ Schreib mal folgendes im `<head>`-Bereich.
   }
 </style>
 ```
+
+---
+class: middle, center
+# Javascript
+## Die Programmiersprache des Internets
+
+---
+# Javascript 1
+## Styling per Knopfdrück ändern
+
+```html
+  <p>
+    <button onclick='aendern()'>Ändern</button>
+  </p>
+
+  <script>
+    function aendern() {
+      document.body.style.cssText = 'background: pink; color: blue;';
+    }
+  </script>
+```
+---
+# Javascript 2
+## Styling per Knopfdrück zurücksetzen
+
+```html
+  <p>
+    <button onclick='abbrechen()'>Zurücksetzen</button>
+  </p>
+
+  <script>
+    function abbrechen() {
+      document.body.style.cssText = '';
+    }
+  </script>
+```
+
+---
+# Javascript 3
+## Begrüßung
+
+```html
+  <p>
+    <label>
+      Vorname:
+      <input type="text" class="text" id="name">
+    </label>
+  </p>
+  <p>
+    <button onclick='sagHallo()'>Grüße</button>
+  </p>
+
+  <script>
+    function sagHallo() {
+      var name = document.getElementById('name').value;
+      alert('Hallo ' + name + '! Schön, dass du da bist!');
+    }
+  </script>
+```
+
+---
+# Javascript 4
+## Taschenrechner
+
+```html
+  <p>
+    <input type="text" class="text" id="ersteZahl">
+    <input type="text" class="text" id="zweiteZahl">
+  </p>
+  <p>
+    <button onclick='rechnen()'>Rechnen</button>
+  </p>
+
+  <script>
+    function rechnen() {
+      var ersteZahl = document.getElementById('ersteZahl').value;
+      var zweiteZahl = document.getElementById('zweiteZahl').value;
+      // die Werte in Zahlen konvertieren mit parseInt
+      var antwort = parseInt(ersteZahl) + parseInt(zweiteZahl);
+      alert('Die Antwort lautet: ' + antwort);
+    }
+  </script>
+```
+
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
     </script>
